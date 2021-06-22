@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
   def createtoken
     puts "body under here =============="
-    puts request.body.band_name
+    puts params
     @band_name =  params[:band_name]
     @followers = params[:followers]
     @token = @user.tokens.create band_name: @band_name, followers: @followers
