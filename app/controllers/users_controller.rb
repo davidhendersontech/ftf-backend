@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def createtoken
-    puts params
+    puts request.body.read
   end
 
   def login
