@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def createtoken
-    byebug
+    puts params
   end
 
   def login
