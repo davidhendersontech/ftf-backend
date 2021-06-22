@@ -14,7 +14,9 @@ class UsersController < ApplicationController
   end
 
   def createtoken
-    puts params[:band_name]
+    @band_name =  params[:band_name]
+    @followers = params[:followers]
+    puts @user
   end
 
   def login
