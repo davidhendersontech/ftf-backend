@@ -41,7 +41,7 @@ class UsersController < ApplicationController
   end
 
   def profile
-    render json: @user, include: @user.tokens, status: :ok
+    render json: @user, include: :tokens, status: :ok
   end
 
   private
