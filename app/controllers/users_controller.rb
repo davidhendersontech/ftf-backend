@@ -16,7 +16,8 @@ class UsersController < ApplicationController
   def createtoken
     @band_name =  params[:band_name]
     @followers = params[:followers]
-    @user.tokens.create band_name: @band_name, followers: @followers
+    @token = @user.tokens.create band_name: @band_name, followers: @followers
+    render json: @token, status: :created
   end
 
   def login
@@ -40,7 +41,7 @@ class UsersController < ApplicationController
   end
 
   def profile
-    render json: @user, status: :ok
+    render json: @user, include: @user.tokens status: :ok
   end
 
   private
