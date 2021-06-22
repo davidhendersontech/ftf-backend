@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def createtoken
-    puts request.body.read
+    puts request.body.band_name
   end
 
   def login
