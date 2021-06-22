@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def createtoken
-    puts params.band_name
+    puts params[:band_name]
   end
 
   def login
