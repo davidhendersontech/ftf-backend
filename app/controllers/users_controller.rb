@@ -13,6 +13,10 @@ class UsersController < ApplicationController
     render json: @user, status: :created
   end
 
+  def createtoken
+    byebug
+  end
+
   def login
     @user = User.find_by username: params[:user][:username]
     
